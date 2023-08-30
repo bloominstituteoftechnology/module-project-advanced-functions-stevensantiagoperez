@@ -48,17 +48,12 @@
     // ❗ Notes:
     // 🧠 There are many approaches to this problem: using a loop, using forEach, using map...
     // 🧠 Solve this challenge using a for/in loop or a for loop.
-    const processLearnersLoop = (learner) => {
-      for (let idx = 0; idx < learner.length; idx++) {
-        if(learner.lovesJS === 0) {
-          learner.lovesJS = false
-        } else if (learner.lovesJS === 1) {
-          learner.lovesJS = true
-        }
-        return learner
+    const processLearnersLoop = (learners) => {
+      for (let idx in learners) {
+        const learner = learners[idx]
+        processSingleLearner(learner)
       }
-
-
+      return learners
     }
 
     // 👉 CHALLENGE 3
@@ -67,8 +62,8 @@
     // ❗ Notes:
     // 🧠 Solve this challenge using the forEach method of the learners array.
     // 🧠 Use arrow functions whenever possible.
-    const processLearnerForEach = () => {
-
+    const processLearnerForEach = (learners) => {
+      
     }
 
     // 👉 CHALLENGE 4
